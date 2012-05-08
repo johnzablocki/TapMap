@@ -1,0 +1,12 @@
+﻿s:name|s:brewery|d:abv
+American Ale|brewery_thomas_hooker_brewing_company|5.0
+Hop Meadow IPA|brewery_thomas_hooker_brewing_company|5.0
+Blonde Ale|brewery_thomas_hooker_brewing_company|5.0
+Irish Red|brewery_thomas_hooker_brewing_company|5.0
+Three Philosophers|brewery_brewery_ommegang|7.1
+Witte|brewery_brewery_ommegang|7.1
+Abbey Ale|brewery_brewery_ommegang|7.1
+Long Trail Ale|brewery_longtrail_brewing_company|6.1
+Double Bag Ale|brewery_longtrail_brewing_company|6.1
+Old Yankee Ale|brewery_cottrell_brewing|4.9
+Harpoon IPA|brewery_harpoon_brewing_company|4.5	

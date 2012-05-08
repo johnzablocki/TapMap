@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Taps</h2>   
+
+<div style="padding:10px;" id="taps">
+    <script language="javascript">
+        window.setInterval(function () {
+            $.get('@Url.Content("~/Tap/List")', function (data) {
+                $("#taps").empty();
+                $.each(data, function (i, v) {
+                    $("#taps").append(
+                        "<div>" + v.user + " tapped " + v.beer + " at " + v.place + "</div>" +
+                        "<div style='margin-bottom:10px;border-bottom:1px solid #c0c0c0;'><em>" 
+                            + v.comment + " at " + v.time + 
+                        "</em></div>"
+                    );
+                });
+            });
+        }, 10000);
+    </script>
+</div>

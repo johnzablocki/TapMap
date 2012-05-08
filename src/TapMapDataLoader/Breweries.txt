@@ -1,0 +1,6 @@
+﻿s:name|s:city|s:province
+Thomas Hooker Brewing Company|Bloomfield|Connecticut
+Brewery Ommegang|Cooperstown|New York
+Cottrell Brewing|Pawcatuck|Connnecticut
+Long Trail Brewing Company|Bridgewater Corners|Vermont
+Harpoon Brewing Company|Boston|Massachusetts

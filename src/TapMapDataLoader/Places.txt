@@ -1,0 +1,9 @@
+﻿s:name|s:address|d:lat|d:long|s:city|s:province|s:postalcode
+Cambridge Brewing Company|1 Kendall Place|35.1|40.1|Cambridge|Massachusetts|02142
+The Joshua Tree|20 Elm Street|35.1|40.1|Somerville|Massachusetts|02143
+Christopher's|1500 Massachusetts Ave|35.1|40.1|Cambridge|Massachusetts|02140
+Cambridge Common|1100 Massachusetts Ave|35.1|40.1|Cambridge|Massachusetts|02140
+Stitch|38 W 37th Street|33.1|43.2|New York|New York|10001
+The Gate|300 5th Street|33.0|43.2|Brooklyn|New York|10101
+Wood n' Tap|304 Silas Dean Highway|33.4|43.1|Rocky Hill|Connecticut|06108
+Southport Brewing Company|200 Old Post Road|33.1|39.1|Southport|Connecticut|06824
