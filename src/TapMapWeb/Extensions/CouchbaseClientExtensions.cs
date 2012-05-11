@@ -30,7 +30,7 @@ namespace TapMapWeb.Extensions
 		public static T GetJson<T>(this CouchbaseClient client, string key) where T : class
 		{			 
 			var json = client.Get<string>(key);
-			return JsonConvert.DeserializeObject<T>(json);
+			return json == null ? null :  JsonConvert.DeserializeObject<T>(json);
 		}
 	}
 }

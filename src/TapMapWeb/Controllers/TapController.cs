@@ -38,8 +38,7 @@ namespace TapMapWeb.Controllers
 
             var tap = new Tap
             {
-                Id = string.Concat(beer.Name, "_", place.Name, "_", DateTime.Now.Ticks),
-                Beer = beer,
+                    Beer = beer,
                 Place = place,
                 Username = SessionUser.Current.Username,
                 Timestamp = DateTime.Now,
@@ -66,3 +65,4 @@ namespace TapMapWeb.Controllers
         }
     }
 }
+    
