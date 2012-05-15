@@ -43,9 +43,9 @@ namespace TapMapWeb.Models
 			_Client.Remove(id);
 		}
 
-		protected IView<T> View(string viewName)
-		{            
-			return _Client.GetView<T>(InflectorNet.Pluralize(typeof(T).Name.ToLower()), viewName);            
+		protected IView<IViewRow> View(string viewName)
+		{        
+			return _Client.GetView(InflectorNet.Pluralize(typeof(T).Name.ToLower()), viewName);            
 		}
 
         protected IView<IViewRow> Project(string viewName)

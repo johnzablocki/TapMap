@@ -21,7 +21,10 @@ namespace TapMapWeb.Models
 
         public IEnumerable<Tap> GetTaps()
         {
-            return View("all_taps").Limit(10).ToList();
+            foreach (var item in View("all_taps").Limit(20).Descending(true))
+            {
+                yield return Get(item.ItemId);
+            }
         }
     }
 }

@@ -9,7 +9,10 @@ namespace TapMapWeb.Models
     {
         public IEnumerable<Beer> GetBeers(string startsWith)
         {
-            return View("all_beers").StartKey(startsWith).Where(c => c.Name.StartsWith(startsWith));
+            foreach (var item in View("all_beers").StartKey(startsWith).EndKey(startsWith + "Z"))
+            {
+                yield return Get(item.ItemId);
+            }
         }
     }
 }

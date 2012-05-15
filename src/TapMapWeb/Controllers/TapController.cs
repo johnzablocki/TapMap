@@ -58,7 +58,6 @@ namespace TapMapWeb.Controllers
                                                                   time = t.Timestamp,
                                                                   user = t.Username
                                                                 })
-                                                    //.Where(t => t.time > SessionUser.Current.LastQuery)
                                                     .ToList(), JsonRequestBehavior.AllowGet);
             SessionUser.Current.LastQuery = DateTime.Now;
             return json;

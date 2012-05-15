@@ -10,7 +10,10 @@ namespace TapMapWeb.Models
 
         public IEnumerable<Place> GetPlaces(string startsWith)
         {
-            return View("all_places").StartKey(startsWith).Where(c => c.Name.StartsWith(startsWith));
+            foreach (var item in View("all_places").StartKey(startsWith).EndKey(startsWith + "Z"))
+            {
+                yield return Get(item.ItemId);
+            }
         }
 
     }

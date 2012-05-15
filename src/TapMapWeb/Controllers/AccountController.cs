@@ -49,7 +49,7 @@ namespace TapMapWeb.Controllers
         public ActionResult LogOut()
         {
             SessionUser.SetCurrent(null);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Home");
         }
         //
         // GET: /Account/Details/5

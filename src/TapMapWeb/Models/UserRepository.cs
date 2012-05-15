@@ -23,7 +23,11 @@ namespace TapMapWeb.Models
 
         public User GetByEmail(string email)
         {
-            return View("by_email").Limit(1).Key(email).Stale(StaleMode.False).FirstOrDefault();
+            foreach (var item in View("by_email").Limit(1).Key(email).Stale(StaleMode.False))
+            {
+                return Get(item.ItemId);
+            }
+            return null;
         }
 
         private Couchbase.StaleMode StaleModeFirstOrDefault()
@@ -33,7 +37,11 @@ namespace TapMapWeb.Models
 
         public User GetByUsername(string username)
         {
-            return View("by_username").Limit(1).Key(username).Stale(StaleMode.False).FirstOrDefault();
+            foreach (var item in View("by_username").Limit(1).Key(username).Stale(StaleMode.False))
+            {
+                return Get(item.ItemId);
+            }
+            return null;
         }
 
         public User Get(string username, string password)

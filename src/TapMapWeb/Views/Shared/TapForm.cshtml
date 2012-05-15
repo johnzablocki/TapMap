@@ -1,0 +1,44 @@
+﻿@{ Func<bool> isLoggedIn = () => SessionUser.Current.IsInRole(TapMapWeb.Constants.RoleConstants.ACTIVE_USERS); }
+@if (isLoggedIn())
+{ 
+    <div>
+        @Html.Label("Place")
+        @Html.TextBox("Place")
+        @Html.Hidden("PlaceId")
+        @Html.Label("Beer")
+        @Html.TextBox("Beer")
+        @Html.Hidden("BeerId")
+        @Html.Label("Comment")
+        @Html.TextArea("Comment")
+        <input type="Button" value="Tap" id="Tap" class="btn-primary" />
+    </div>
+}
+<script language="javascript">
+    $().ready(function (a) {
+        $("#Place").autocomplete({
+            source: '@Url.Content("~/AutoComplete/Places")',
+            minLength: 2,
+            select: function (e, u) { $("#PlaceId").val(u.item.id); }
+        });
+
+        $("#Beer").autocomplete({
+            source: '@Url.Content("~/AutoComplete/Beers")',
+            minLength: 2,
+            select: function (e, u) { $("#BeerId").val(u.item.id); }
+        });
+
+        $("#Tap").bind("click", function (e) {
+            $.post('@Url.Content("~/Tap/Create")',
+                                    {
+                                        "placeId": $("#PlaceId").val(),
+                                        "beerId": $("#BeerId").val(),
+                                        "Comment": $("#Comment").val()
+                                    },
+                                    function (data) {
+                                        $("#Place").val("");
+                                        $("#Beer").val("");
+                                        $("#Comment").val("");
+                                     });
+        });
+    });
+</script>
